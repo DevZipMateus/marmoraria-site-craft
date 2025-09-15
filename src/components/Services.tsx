@@ -42,8 +42,16 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="relative py-20">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/marble-background.jpg)' }}
+      />
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-secondary/90" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header da Seção */}
           <div className="text-center mb-16">

@@ -2,8 +2,16 @@ import { Phone, Mail, MapPin, Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container mx-auto px-4">
+    <footer className="relative bg-primary text-primary-foreground py-12">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/marble-background.jpg)' }}
+      />
+      
+      {/* Dark Overlay for Footer */}
+      <div className="absolute inset-0 bg-primary/90" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Logo e Informações da Empresa */}

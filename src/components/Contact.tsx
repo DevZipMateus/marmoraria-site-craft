@@ -46,8 +46,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="relative py-20">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/marble-background.jpg)' }}
+      />
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-background/85" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header da Seção */}
           <div className="text-center mb-16">
