@@ -20,17 +20,19 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <img 
               src="/logo.png" 
               alt="Logo Marmoraria Brum Marquinhos" 
-              className="h-12 w-auto"
+              className="h-8 sm:h-10 md:h-12 w-auto"
             />
-            <div className="hidden md:block">
-              <h2 className="text-xl font-bold text-foreground">Marmoraria Brum Marquinhos</h2>
+            <div className="hidden sm:block">
+              <h2 className="text-sm sm:text-lg md:text-xl font-bold text-foreground leading-tight">
+                Marmoraria Brum Marquinhos
+              </h2>
             </div>
           </div>
 
@@ -63,9 +65,9 @@ const Header = () => {
           </nav>
 
           {/* Contact Info - Desktop */}
-          <div className="hidden xl:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm">
-              <Phone className="h-4 w-4 text-accent" />
+          <div className="hidden xl:flex items-center space-x-3 lg:space-x-4">
+            <div className="flex items-center space-x-2 text-xs lg:text-sm">
+              <Phone className="h-3 w-3 lg:h-4 lg:w-4 text-accent" />
               <span className="text-muted-foreground">(55) 9 9648-6463</span>
             </div>
             <Button 

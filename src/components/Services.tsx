@@ -51,44 +51,44 @@ const Services = () => {
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-secondary/90" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header da Seção */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Nossos Serviços Especializados
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Oferecemos uma ampla gama de serviços em marmoraria, combinando tradição artesanal 
               com técnicas modernas para resultados excepcionais.
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="group bg-card border border-border rounded-lg p-6 shadow-elegant hover:shadow-gold transition-smooth hover:-translate-y-1"
+                className="group bg-card border border-border rounded-lg p-4 sm:p-6 shadow-elegant hover:shadow-gold transition-smooth hover:-translate-y-1"
               >
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-smooth">
-                  <service.icon className="h-8 w-8 text-accent group-hover:text-accent-foreground" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-accent/10 rounded-full mb-4 sm:mb-6 group-hover:bg-accent group-hover:text-accent-foreground transition-smooth">
+                  <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-accent-foreground" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-4 sm:mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></div>
+                    <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-accent rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}

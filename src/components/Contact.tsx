@@ -55,40 +55,40 @@ const Contact = () => {
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/85" />
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header da Seção */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Entre em Contato
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Estamos prontos para atendê-lo e transformar seus projetos em realidade. 
               Entre em contato conosco através dos canais abaixo.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Informações de Contato */}
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8">
                 Informações de Contato
               </h3>
               
-              <div className="space-y-6 mb-8">
+              <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="p-6 hover:shadow-gold transition-smooth">
-                    <div className="flex items-start space-x-4">
+                  <Card key={index} className="p-4 sm:p-6 hover:shadow-gold transition-smooth">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                          <info.icon className="h-6 w-6 text-accent" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                          <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">
+                        <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
                           {info.title}
                         </h4>
-                        <p className="text-muted-foreground mb-3">
+                        <p className="text-muted-foreground mb-3 text-sm sm:text-base">
                           {info.content}
                         </p>
                         {info.action && (

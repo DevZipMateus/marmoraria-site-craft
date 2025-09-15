@@ -38,33 +38,34 @@ const About = () => {
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-background/85" />
-      <div className="container mx-auto px-4 relative z-10">
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header da Seção */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
               Sobre a Marmoraria Brum Marquinhos
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               Com mais de 15 anos de tradição no mercado de marmoraria, somos especialistas em transformar 
               ambientes com a beleza e durabilidade das pedras naturais.
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="text-center p-6 bg-card border border-border rounded-lg shadow-elegant hover:shadow-gold transition-smooth"
+                className="text-center p-4 sm:p-6 bg-card border border-border rounded-lg shadow-elegant hover:shadow-gold transition-smooth"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8 text-accent" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-accent/10 rounded-full mb-4">
+                  <feature.icon className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -72,53 +73,55 @@ const About = () => {
           </div>
 
           {/* Conteúdo Principal */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Texto */}
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
                 Tradição e Qualidade em Cada Projeto
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 A Marmoraria Brum Marquinhos nasceu da paixão pela arte de trabalhar com pedras naturais. 
                 Ao longo dos anos, construímos nossa reputação baseada na qualidade excepcional dos nossos 
                 trabalhos e no compromisso inabalável com a satisfação dos nossos clientes.
               </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Nossa equipe especializada possui o conhecimento técnico e a experiência necessária para 
                 realizar projetos de qualquer complexidade, desde cozinhas residenciais até grandes 
                 empreendimentos comerciais.
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">{benefit}</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-accent mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base text-muted-foreground">{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Estatísticas */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-gradient-gold rounded-lg text-accent-foreground">
-                <div className="text-3xl font-bold mb-2">15+</div>
-                <div className="text-sm">Anos de Experiência</div>
-              </div>
-              
-              <div className="text-center p-6 bg-card border border-border rounded-lg">
-                <div className="text-3xl font-bold text-accent mb-2">500+</div>
-                <div className="text-sm text-muted-foreground">Projetos Realizados</div>
-              </div>
-              
-              <div className="text-center p-6 bg-card border border-border rounded-lg">
-                <div className="text-3xl font-bold text-accent mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Clientes Satisfeitos</div>
-              </div>
-              
-              <div className="text-center p-6 bg-gradient-gold rounded-lg text-accent-foreground">
-                <div className="text-3xl font-bold mb-2">6</div>
-                <div className="text-sm">Especialidades</div>
+            <div className="order-1 lg:order-2">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto lg:max-w-none">
+                <div className="text-center p-4 sm:p-6 bg-gradient-gold rounded-lg text-accent-foreground">
+                  <div className="text-2xl sm:text-3xl font-bold mb-2">15+</div>
+                  <div className="text-xs sm:text-sm">Anos de Experiência</div>
+                </div>
+                
+                <div className="text-center p-4 sm:p-6 bg-card border border-border rounded-lg">
+                  <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">500+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Projetos Realizados</div>
+                </div>
+                
+                <div className="text-center p-4 sm:p-6 bg-card border border-border rounded-lg">
+                  <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">100%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Clientes Satisfeitos</div>
+                </div>
+                
+                <div className="text-center p-4 sm:p-6 bg-gradient-gold rounded-lg text-accent-foreground">
+                  <div className="text-2xl sm:text-3xl font-bold mb-2">6</div>
+                  <div className="text-xs sm:text-sm">Especialidades</div>
+                </div>
               </div>
             </div>
           </div>
