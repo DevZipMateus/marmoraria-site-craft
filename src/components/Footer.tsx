@@ -84,7 +84,7 @@ const Footer = () => {
                 <h5 className="font-semibold mb-2 text-sm sm:text-base">Horário de Funcionamento</h5>
                 <p className="text-primary-foreground/80 text-xs sm:text-sm">
                   Segunda a Sexta<br />
-                  07:30 às 18:30
+                  07:30 às 18h
                 </p>
               </div>
             </div>
