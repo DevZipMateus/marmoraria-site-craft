@@ -31,7 +31,7 @@ const Footer = () => {
                 excelência em cada projeto realizado.
               </p>
               <p className="text-xs sm:text-sm text-primary-foreground/60">
-                CNPJ: 007.958.530-25
+                CNPJ: 48.667.773/0001-52
               </p>
             </div>
 
